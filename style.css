@@ -1,0 +1,230 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0F172A;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7C3AED, #06B6D4);
+  border-radius: 20px;
+}
+
+/* Glass Effect */
+.glass {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #7C3AED, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Background Glow */
+.hero-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Navbar Hover */
+nav a {
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #06B6D4;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #7C3AED;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #6D28D9;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: #06B6D4;
+  color: #06B6D4;
+}
+
+/* Skill Cards */
+.skill-card {
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #06B6D4;
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
+}
+
+/* Work Cards */
+.work-card {
+  transition: all 0.4s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.25);
+}
+
+.work-card img {
+  transition: transform 0.5s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Contact Form */
+input,
+textarea {
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #06B6D4 !important;
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);
+}
+
+/* Footer */
+footer {
+  color: #94A3B8;
+}
+
+/* Back To Top Button */
+#topBtn {
+  transition: all 0.3s ease;
+}
+
+#topBtn:hover {
+  transform: translateY(-5px);
+  background: #0891B2;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    line-height: 1.2;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .work-card,
+  .skill-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(124, 58, 237, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(124, 58, 237, 0.4);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s infinite;
+}
+
+/* Section Spacing */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Selection Color */
+::selection {
+  background: #7C3AED;
+  color: white;
+}
+
+/* Smooth Transition */
+a,
+button,
+input,
+textarea {
+  transition: all 0.3s ease;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio | Designer & Web Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7C3AED',
+            secondary: '#06B6D4',
+            dark: '#0F172A',
+            soft: '#F8FAFC'
+          },
+          boxShadow: {
+            glow: '0 20px 60px rgba(124, 58, 237, 0.25)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(16px); background: rgba(255,255,255,0.08); }
+    .gradient-text {
+      background: linear-gradient(90deg, #7C3AED, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white font-sans">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#home" class="text-xl font-bold gradient-text">MyPortfolio</a>
+
+      <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+
+      <ul id="menu" class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+        <li><a class="hover:text-secondary" href="#about">About</a></li>
+        <li><a class="hover:text-secondary" href="#skills">Skills</a></li>
+        <li><a class="hover:text-secondary" href="#works">Works</a></li>
+        <li><a class="hover:text-secondary" href="#achievements">Achievements</a></li>
+        <li><a class="hover:text-secondary" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden px-5 pb-4 bg-dark border-t border-white/10">
+      <a class="block py-2 text-slate-300" href="#about">About</a>
+      <a class="block py-2 text-slate-300" href="#skills">Skills</a>
+      <a class="block py-2 text-slate-300" href="#works">Works</a>
+      <a class="block py-2 text-slate-300" href="#achievements">Achievements</a>
+      <a class="block py-2 text-slate-300" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center pt-24 relative overflow-hidden">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div>
+        <p class="text-secondary font-semibold mb-3">Hello, I am</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+          A Designer, Web Developer & Student
+        </h1>
+        <p class="text-slate-300 text-lg mb-8 max-w-xl">
+          I create clean, modern, and user-friendly digital experiences. I am studying engineering, AI tools, and Plus One / Plus Two, while building my skills in design and web development.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#works" class="px-6 py-3 rounded-full bg-primary hover:bg-violet-700 transition shadow-glow font-semibold">View My Works</a>
+          <a href="#contact" class="px-6 py-3 rounded-full border border-white/20 hover:border-secondary hover:text-secondary transition font-semibold">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="glass border border-white/10 rounded-3xl p-8 shadow-glow">
+        <div class="aspect-square rounded-3xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-center p-8">
+          <div>
+            <div class="text-7xl mb-4">✨</div>
+            <h2 class="text-3xl font-bold">Creative Portfolio</h2>
+            <p class="text-white/80 mt-3">Design • Development • AI Tools</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-5">About <span class="gradient-text">Me</span></h2>
+        <p class="text-slate-300 leading-8">
+          I am a passionate designer and web developer. I enjoy creating websites, learning new technologies, and improving my creative skills. I am also a student of engineering, AI tools, and Plus One / Plus Two.
+        </p>
+        <p class="text-slate-300 leading-8 mt-4">
+          My goal is to build meaningful designs and websites that are beautiful, responsive, and useful for people.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <h3 class="text-3xl font-bold text-secondary">3+</h3>
+          <p class="text-slate-300 mt-2">Major Works</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <h3 class="text-3xl font-bold text-secondary">2+</h3>
+          <p class="text-slate-300 mt-2">Achievements</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <h3 class="text-3xl font-bold text-secondary">AI</h3>
+          <p class="text-slate-300 mt-2">Tools Learner</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10">
+          <h3 class="text-3xl font-bold text-secondary">100%</h3>
+          <p class="text-slate-300 mt-2">Creative Mindset</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold">My <span class="gradient-text">Skills</span></h2>
+        <p class="text-slate-400 mt-3">Skills I am learning and improving every day</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="skill-card glass p-6 rounded-2xl border border-white/10 hover:-translate-y-2 transition">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="font-bold text-xl mb-2">Designing</h3>
+          <p class="text-slate-400">Creative layouts, posters, branding, and visual design.</p>
+        </div>
+        <div class="skill-card glass p-6 rounded-2xl border border-white/10 hover:-translate-y-2 transition">
+          <div class="text-4xl mb-4">💻</div>
+          <h3 class="font-bold text-xl mb-2">Web Development</h3>
+          <p class="text-slate-400">HTML, CSS, JavaScript, and responsive websites.</p>
+        </div>
+        <div class="skill-card glass p-6 rounded-2xl border border-white/10 hover:-translate-y-2 transition">
+          <div class="text-4xl mb-4">🤖</div>
+          <h3 class="font-bold text-xl mb-2">AI Tools</h3>
+          <p class="text-slate-400">Using AI tools for productivity, design, and learning.</p>
+        </div>
+        <div class="skill-card glass p-6 rounded-2xl border border-white/10 hover:-translate-y-2 transition">
+          <div class="text-4xl mb-4">✍️</div>
+          <h3 class="font-bold text-xl mb-2">Prompt Engineering</h3>
+          <p class="text-slate-400">Writing prompts to get better results from AI tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Works -->
+  <section id="works" class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold">My <span class="gradient-text">Works</span></h2>
+        <p class="text-slate-400 mt-3">Replace these cards with your real projects later</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="work-card bg-dark rounded-3xl overflow-hidden border border-white/10 hover:border-secondary transition">
+          <div class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-5xl">🖼️</div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Design Project 01</h3>
+            <p class="text-slate-400 mb-4">A creative design work. Add your own image, title, and details here.</p>
+            <a href="#" class="text-secondary font-semibold">View Project →</a>
+          </div>
+        </div>
+
+        <div class="work-card bg-dark rounded-3xl overflow-hidden border border-white/10 hover:border-secondary transition">
+          <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-5xl">🌐</div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Website Project 02</h3>
+            <p class="text-slate-400 mb-4">A responsive website project made using web development skills.</p>
+            <a href="#" class="text-secondary font-semibold">View Project →</a>
+          </div>
+        </div>
+
+        <div class="work-card bg-dark rounded-3xl overflow-hidden border border-white/10 hover:border-secondary transition">
+          <div class="h-48 bg-gradient-to-br from-fuchsia-500 to-violet-700 flex items-center justify-center text-5xl">🤖</div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">AI Tool Project 03</h3>
+            <p class="text-slate-400 mb-4">A project using AI tools, prompt engineering, or creative automation.</p>
+            <a href="#" class="text-secondary font-semibold">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-24">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold">My <span class="gradient-text">Achievements</span></h2>
+        <p class="text-slate-400 mt-3">Milestones I have completed</p>
+      </div>
+
+      <div class="space-y-5">
+        <div class="glass rounded-2xl p-6 border border-white/10 flex gap-5 items-start">
+          <span class="text-3xl">🏆</span>
+          <div>
+            <h3 class="text-xl font-bold">Completed Prompt Engineering</h3>
+            <p class="text-slate-400 mt-1">Learned how to write effective prompts for AI tools.</p>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 border border-white/10 flex gap-5 items-start">
+          <span class="text-3xl">🎨</span>
+          <div>
+            <h3 class="text-xl font-bold">Completed Designing</h3>
+            <p class="text-slate-400 mt-1">Improved creative design skills and visual presentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Let’s <span class="gradient-text">Connect</span></h2>
+      <p class="text-slate-400 mb-8">Have a project, idea, or collaboration? Contact me.</p>
+
+      <div class="glass border border-white/10 rounded-3xl p-8">
+        <form id="contactForm" class="grid gap-4">
+          <input type="text" placeholder="Your Name" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-secondary" required />
+          <input type="email" placeholder="Your Email" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-secondary" required />
+          <textarea rows="5" placeholder="Your Message" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-secondary" required></textarea>
+          <button type="submit" class="px-6 py-4 rounded-xl bg-primary hover:bg-violet-700 transition font-bold">Send Message</button>
+        </form>
+        <p id="formMsg" class="hidden text-secondary font-semibold mt-5">Thank you! Your message has been submitted.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-slate-500 border-t border-white/10">
+    <p>© 2026 MyPortfolio. Designed and developed by me.</p>
+  </footer>
+
+  <button id="topBtn" class="hidden fixed bottom-6 right-6 w-12 h-12 rounded-full bg-secondary text-dark font-bold shadow-lg">↑</button>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const topBtn = document.getElementById('topBtn');
+    const contactForm = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        topBtn.classList.remove('hidden');
+      } else {
+        topBtn.classList.add('hidden');
+      }
+    });
+
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formMsg.classList.remove('hidden');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
